@@ -1,16 +1,16 @@
-package com.example.apprickandmorty.ui.send;
+package com.example.apprickandmorty.ui.serie;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SendViewModel extends ViewModel {
+public class SerieViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SendViewModel() {
+    public SerieViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is send fragment");
+        mText.setValue("This is serie fragment");
     }
 
     public LiveData<String> getText() {

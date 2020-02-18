@@ -1,16 +1,16 @@
-package com.example.apprickandmorty.ui.home;
+package com.example.apprickandmorty.ui.perguntas;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class PerguntasViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public PerguntasViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is perguntas fragment");
     }
 
     public LiveData<String> getText() {

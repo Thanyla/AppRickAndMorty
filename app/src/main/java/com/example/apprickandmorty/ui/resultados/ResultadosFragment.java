@@ -1,4 +1,4 @@
-package com.example.apprickandmorty.ui.send;
+package com.example.apprickandmorty.ui.resultados;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.apprickandmorty.R;
 
-public class SendFragment extends Fragment {
+public class ResultadosFragment extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private ResultadosViewModel resultadosViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
+        resultadosViewModel =
+                ViewModelProviders.of(this).get(ResultadosViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_resultados, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        resultadosViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

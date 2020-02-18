@@ -1,4 +1,4 @@
-package com.example.apprickandmorty.ui.home;
+package com.example.apprickandmorty.ui.serie;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.apprickandmorty.R;
 
-public class HomeFragment extends Fragment {
+public class SerieFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private SerieViewModel serieViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        serieViewModel =
+                ViewModelProviders.of(this).get(SerieViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_serie, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(this, new Observer<String>() {
+        serieViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
