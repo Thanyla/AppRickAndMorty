@@ -1,12 +1,17 @@
 package com.example.apprickandmorty;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import com.example.apprickandmorty.curiosidade.CuriosidadeActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -20,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    //Adicionar método onOptionsItemSelected para tratar menu simples (Layout: menu/main.xml
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_curiosidades:
+                Toast.makeText(getApplicationContext(), "Curiosidade", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(this, CuriosidadeActivity.class);
+                startActivity(i);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
