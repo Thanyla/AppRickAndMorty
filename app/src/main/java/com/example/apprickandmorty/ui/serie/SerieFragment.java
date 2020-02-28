@@ -15,21 +15,25 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.apprickandmorty.R;
 
 public class SerieFragment extends Fragment {
+    private TextView textView;
+    private final String introducao = "Rick and Morty nasceu como uma sátira/homenagem" +
+            " ao icônico duo de protagonistas Doc Brown e Marty, dos filmes " +
+            "De Volta Para o Futuro, lançados na década de 1980.";
 
-    private SerieViewModel serieViewModel;
-
+    private final String paragrafo1 = "\nRick and Morty, uma reedição existencialista, " +
+            "politicamente incorreta e brutalmente humana da clássica saga, " +
+            "superou a premissa “emprestada” e consagrou-se como um programa " +
+            "original por méritos próprios.";
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        serieViewModel =
-                ViewModelProviders.of(this).get(SerieViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_serie, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        serieViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        textView = root.findViewById(R.id.text_home);
+        textView.setText(introducao);
+
+        textView.append(paragrafo1);
+
+
         return root;
     }
 }
