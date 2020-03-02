@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="5dp"
         tools:context=".curiosidade.CuriosidadeActivity">
 
         <TextView
@@ -28,7 +29,7 @@
         <ImageView
             android:id="@+id/imageViewCuriosidade"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="333dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/app_name"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
@@ -38,41 +39,41 @@
 
         <TextView
             android:id="@+id/text_curiosidade"
-            android:layout_width="390dp"
-            android:layout_height="111dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/curiosidade1"
             android:textAlignment="inherit"
             android:textAllCaps="false"
             android:textSize="15sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/imageViewCuriosidade"
-            app:layout_constraintHorizontal_bias="0.456"
-            app:layout_constraintStart_toStartOf="@+id/imageViewCuriosidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewCuriosidade" />
 
         <TextView
             android:id="@+id/text_curiosidade2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="@string/curiosidade2"
             android:textAlignment="inherit"
             android:textSize="15sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/text_curiosidade3"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_curiosidade3" />
 
         <TextView
             android:id="@+id/text_curiosidade3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
             android:text="@string/curiosidade3"
             android:textAlignment="inherit"
             android:textSize="15sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/text_curiosidade"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/text_curiosidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_curiosidade" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

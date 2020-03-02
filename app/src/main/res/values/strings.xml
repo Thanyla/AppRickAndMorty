@@ -26,13 +26,13 @@
         como diz a lenda, o episódio foi realmente escrito no mesmo dia.
     </string>
     <string name="curiosidade2">
-        2- Em vários casos ao longo da série, o Rick observa que
+        3- Em vários casos ao longo da série, o Rick observa que
         ele está completamente consciente de que ele está numa série de desenhos animados.
         Porque ele frequentemente fala com seu público à La Deadpool, e isso pode ser visto
         nos episódios ‘Total Rickall’ e ‘Raising Gazorpazorg’.
     </string>
     <string name="curiosidade3">
-        3- Aparentemente, os dois personagens são baseados nas duas metades do co-criador
+        2- Aparentemente, os dois personagens são baseados nas duas metades do co-criador
         Justin Roiland. Dan Harmon admitiu, dizendo que a série é “uma personificação precisa
         do transtorno bipolar”. Então faz sentido, considerando a forma como os dois
         personagens são diferentes, eles ainda conseguem manter uma relação muito sólida
@@ -48,5 +48,10 @@
         brutalmente humana da clássica saga, superou a premissa “emprestada” e
         consagrou-se como um programa original por méritos próprios.
     </string>
-    <string name="quiz">Quem você é no Rick and Morty</string>
+    <string name="quiz">Quem é você no Rick and Morty</string>
+    <string name="pergunta1">Ao ser teletransportado para um novo planeta você?</string>
+    <string name="escravizar">Escravizar a população para seu divertimento.</string>
+    <string name="amizade">Tentar fazer amizade com os habitantes.</string>
+    <string name="selfie">Tiraria uma selfie para registrar que você é incrivel.</string>
+    <string name="escondido">Ficaria escondido, afinal não sabe dos perigos que podem haver.</string>
 </resources>
