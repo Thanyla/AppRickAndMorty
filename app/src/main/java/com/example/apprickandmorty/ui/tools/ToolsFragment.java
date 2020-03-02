@@ -1,5 +1,6 @@
 package com.example.apprickandmorty.ui.tools;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,20 +17,15 @@ import com.example.apprickandmorty.R;
 
 public class ToolsFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, "Teste");
+        intent.setPackage("com.whatsapp");
+        intent.setType("text/plain");
+        startActivity(intent);
         return root;
     }
 }

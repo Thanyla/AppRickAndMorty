@@ -32,6 +32,8 @@ public class SerieFragment extends Fragment {
         textView.setText(introducao);
 
         textView.append(paragrafo1);
+        textView.append(paragrafo1);
+
 
 
         return root;
