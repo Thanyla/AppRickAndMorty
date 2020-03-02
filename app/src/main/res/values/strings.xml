@@ -17,4 +17,25 @@
     <string name="menu_perguntas">Perguntas</string>
     <string name="menu_resultados">Resultados</string>
     <string name="action_curiosidade">Curiosidade</string>
+
+    <string name="curiosidade1">
+        1- Embora a produção seja essencialmente uma obra-prima, aparentemente,
+        não demorou muito para que a visão da série realmente se concretizasse.
+        Entretanto, na verdade, só levou cerca de seis horas para os escritores
+        Dan Harmon e Justin Rolland bombear o primeiro episódio ‘Piloto’. Portanto,
+        como diz a lenda, o episódio foi realmente escrito no mesmo dia.
+    </string>
+    <string name="curiosidade2">
+        2- Em vários casos ao longo da série, o Rick observa que
+        ele está completamente consciente de que ele está numa série de desenhos animados.
+        Porque ele frequentemente fala com seu público à La Deadpool, e isso pode ser visto
+        nos episódios ‘Total Rickall’ e ‘Raising Gazorpazorg’.
+    </string>
+    <string name="curiosidade3">
+        3- Aparentemente, os dois personagens são baseados nas duas metades do co-criador
+        Justin Roiland. Dan Harmon admitiu, dizendo que a série é “uma personificação precisa
+        do transtorno bipolar”. Então faz sentido, considerando a forma como os dois
+        personagens são diferentes, eles ainda conseguem manter uma relação muito sólida
+        entre avô e neto.
+    </string>
 </resources>
