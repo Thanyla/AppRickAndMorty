@@ -38,4 +38,15 @@
         personagens são diferentes, eles ainda conseguem manter uma relação muito sólida
         entre avô e neto.
     </string>
+
+    <string name="introducao">
+        Rick and Morty nasceu como uma sátira/homenagem ao icônico duo de protagonistas
+        Doc Brown e Marty, dos filmes De Volta Para o Futuro, lançados na década de 1980.
+    </string>
+    <string name="pos_introducao">
+        Rick and Morty, uma reedição existencialista, politicamente incorreta e
+        brutalmente humana da clássica saga, superou a premissa “emprestada” e
+        consagrou-se como um programa original por méritos próprios.
+    </string>
+    <string name="quiz">Quem você é no Rick and Morty</string>
 </resources>

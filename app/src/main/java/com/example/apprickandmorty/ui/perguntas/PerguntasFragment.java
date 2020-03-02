@@ -20,16 +20,8 @@ public class PerguntasFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        perguntasViewModel =
-                ViewModelProviders.of(this).get(PerguntasViewModel.class);
         View root = inflater.inflate(R.layout.fragment_perguntas, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        perguntasViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }

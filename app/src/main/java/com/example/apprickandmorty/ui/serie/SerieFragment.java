@@ -16,26 +16,14 @@ import com.example.apprickandmorty.R;
 
 public class SerieFragment extends Fragment {
     private TextView textView;
-    private final String introducao = "Rick and Morty nasceu como uma sátira/homenagem" +
-            " ao icônico duo de protagonistas Doc Brown e Marty, dos filmes " +
-            "De Volta Para o Futuro, lançados na década de 1980.";
-
-    private final String paragrafo1 = "\nRick and Morty, uma reedição existencialista, " +
-            "politicamente incorreta e brutalmente humana da clássica saga, " +
-            "superou a premissa “emprestada” e consagrou-se como um programa " +
-            "original por méritos próprios.";
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_serie, container, false);
         textView = root.findViewById(R.id.text_home);
-        textView.setText(introducao);
-
-        textView.append(paragrafo1);
-        textView.append(paragrafo1);
-
-
-
+        textView.setText(R.string.introducao);
+        textView = root.findViewById(R.id.text_pos_introducao);
+        textView.setText(R.string.pos_introducao);
         return root;
     }
 }

@@ -5,11 +5,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="5dp">
         tools:context=".curiosidade.CuriosidadeActivity">
 
         <TextView
@@ -21,7 +20,10 @@
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageViewCuriosidade"
@@ -29,51 +31,48 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/curiosidade"/>
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:srcCompat="@drawable/curiosidade" />
 
         <TextView
             android:id="@+id/text_curiosidade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="390dp"
+            android:layout_height="111dp"
             android:text="@string/curiosidade1"
             android:textAlignment="inherit"
             android:textAllCaps="false"
             android:textSize="15sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/imageViewCuriosidade"
+            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintStart_toStartOf="@+id/imageViewCuriosidade"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCuriosidade" />
 
         <TextView
             android:id="@+id/text_curiosidade2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:text="@string/curiosidade2"
             android:textAlignment="inherit"
             android:textSize="15sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/text_curiosidade3"
+            app:layout_constraintTop_toBottomOf="@+id/text_curiosidade3" />
+
         <TextView
             android:id="@+id/text_curiosidade3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:text="@string/curiosidade3"
             android:textAlignment="inherit"
             android:textSize="15sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+            app:layout_constraintEnd_toEndOf="@+id/text_curiosidade"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/text_curiosidade"
+            app:layout_constraintTop_toBottomOf="@+id/text_curiosidade" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
