@@ -54,4 +54,18 @@
     <string name="amizade">Tentar fazer amizade com os habitantes.</string>
     <string name="selfie">Tiraria uma selfie para registrar que você é incrivel.</string>
     <string name="escondido">Ficaria escondido, afinal não sabe dos perigos que podem haver.</string>
+    <string name="resultado">Ver resultado</string>
+    <string name="pergunta2">Uma raça alienígena superior está comandando a Terra, e você?</string>
+    <string name="q2resposta1">Pensa em um plano para dizima-los e expulsar cada verme do seu planeta.</string>
+    <string name="q2resposta2">Eles não estão sendo malvados, então não vejo muito problema.</string>
+    <string name="q2resposta3">Eles me amam, sou popular, que eles reinem sobre a Terra!</string>
+    <string name="q2resposta4">Consegui um bom emprego, a vida é boa e segura, deixa como está.</string>
+    <string name="q2resposta5">Já que todo mundo está feliz, eu estou feliz, vou beber.</string>
+    <string name="pergunta3">Uma organização secreta está tentando roubar uma invenção sua muito valiosa para eles, colocando sua família em perigo, você?</string>
+    <string name="q3resposta1">Invade a sede deles e manda tudo para o espaço!</string>
+    <string name="q3resposta2">Pensa em como pode fazer para eles entregarem o objeto.</string>
+    <string name="q3resposta3">Entrega, mas exige os créditos pela invenção.</string>
+    <string name="q3resposta4">Com tanto medo, não só entrega a invenção, mas todos os seus projetos.</string>
+    <string name="q3resposta5">Destrói a inveção, pois sabe que não deve cair em mão erradas.</string>
+    <string name="textResultado">Você é ...</string>
 </resources>

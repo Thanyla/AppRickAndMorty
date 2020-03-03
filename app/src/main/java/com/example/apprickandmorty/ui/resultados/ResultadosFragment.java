@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -16,20 +17,26 @@ import com.example.apprickandmorty.R;
 
 public class ResultadosFragment extends Fragment {
 
-    private ResultadosViewModel resultadosViewModel;
-
+    TextView textView;
+    ImageView imageView;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        resultadosViewModel =
-                ViewModelProviders.of(this).get(ResultadosViewModel.class);
         View root = inflater.inflate(R.layout.fragment_resultados, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        resultadosViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        textView = root.findViewById(R.id.text_resultado);
+        imageView = root.findViewById(R.id.imageViewResultado);
+        String resposta = this.getArguments().getString("resultado");
+        textView.setText(resposta);
+
+        if(resposta == "Rick")
+            imageView.setImageResource(R.drawable.rick);
+        if(resposta == "Morty")
+            imageView.setImageResource(R.drawable.morty);
+        if (resposta == "Jerry")
+            imageView.setImageResource(R.drawable.jerry);
+        if (resposta == "Summer")
+            imageView.setImageResource(R.drawable.summer);
+
+        System.out.println(resposta);
         return root;
     }
 }

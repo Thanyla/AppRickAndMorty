@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.apprickandmorty.curiosidade.CuriosidadeActivity;
+import com.example.apprickandmorty.middlewares.Regras;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -26,11 +27,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    Regras regras = new Regras();
+    String personagem;
+    Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,5 +91,32 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void onClickResultadosQuiz(View view) {
+        RadioGroup radioButtonGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
+        int pergunta1 = radioButtonGroup1.getCheckedRadioButtonId();
+        RadioButton resposta = (RadioButton) findViewById(pergunta1);
+        regras.addPeso(Integer.parseInt(resposta.getTag().toString()));
+
+        RadioGroup radioButtonGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
+        int pergunta2 = radioButtonGroup1.getCheckedRadioButtonId();
+        RadioButton resposta2 = (RadioButton) findViewById(pergunta2);
+        regras.addPeso(Integer.parseInt(resposta2.getTag().toString()));
+
+        RadioGroup radioButtonGroup3 = (RadioGroup) findViewById(R.id.radioGroup3);
+        int pergunta3 = radioButtonGroup1.getCheckedRadioButtonId();
+        RadioButton resposta3 = (RadioButton) findViewById(pergunta3);
+        regras.addPeso(Integer.parseInt(resposta3.getTag().toString()));
+
+        System.out.println(regras.getVencedor());
+        personagem = regras.getVencedor();
+
+        bundle.putString("resultado", personagem);
+
+
+        regras = new Regras();
+
+        Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.nav_resultados, bundle);
     }
 }

@@ -26,6 +26,10 @@ public class Regras {
         this.pesos[4]++;
     }
 
+    public void addPeso(int id){
+        this.pesos[id]++;
+    }
+
     public String getVencedor(){
         int vencedor = -1;
 
@@ -41,6 +45,14 @@ public class Regras {
         }
 
         return personagens[vencedor];
+    }
+
+    public String getPesos(){
+        String resposta = "";
+        for (int i=0; i<5; i++){
+            resposta = resposta + pesos[i] + ", ";
+        }
+        return resposta;
     }
 
 
