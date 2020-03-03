@@ -11,11 +11,10 @@
 
     <ImageView
         android:id="@+id/imageViewInicio"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
-        android:scaleType="center"
-        android:src="@drawable/inicio" />
+        android:src="@drawable/haha" />
 
     <TextView
         android:id="@+id/text_home"
